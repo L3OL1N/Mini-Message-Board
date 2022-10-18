@@ -2,7 +2,37 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
+ul {
+  list-style-type: none;
+  text-transform: capitalize;
+}
+ul>li {
+  width: 20%;
+  margin: 2px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+ul>li>div.text {
+  text-indent: 2em;
+  font-size: 26px;;
+}
 a {
   color: #00B7FF;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+form>textarea {
+  resize: none;
+}
+form>input {
+  margin: 5px 0px;
+}
+form>button {
+  margin: 5px;
+  width: 30%;
+  margin-left: 70%;
 }

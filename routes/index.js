@@ -19,12 +19,16 @@ router.get('/', function(req, res, next) {
 });
 /* GET NEW page. */
 router.get('/new', function(req, res) {
-  res.render("form");
+  res.render("form",{title: 'Message Board'});
 });
-router.post('/new',function(req,res,next){
+router.post('/new',function(req,res){
   const messageText = req.body.textarea;
   const messageUser = req.body.userName;
-  messages.push({text: messageText, user: messageUser, added: new Date()});
+  messages.push({
+    text: messageText,
+    user: messageUser, 
+    added: new Date()
+  });
   console.log(messages[2])
   res.redirect('/')
 })

@@ -3,4 +3,9 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  ul
+    each mes in messages
+      li
+        div.userName= mes.user 
+        div.text= mes.text
   a(href="http://localhost:3000/new") NEW MESSAGE
