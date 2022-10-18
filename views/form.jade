@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  form(
+    method="POST"
+    action="/new"
+  )
+    textarea(name="textarea", cols="30", rows="10")
+    input(name="userName")
+    button(type="submit") Submit
